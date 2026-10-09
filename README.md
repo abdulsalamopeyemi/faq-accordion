@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# FAQ Accordion — Frontend Mentor Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive FAQ accordion built with React and SCSS as a solution to the [Frontend Mentor FAQ Accordion Challenge](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz).
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This project is an interactive FAQ accordion that allows users to expand and collapse answers to frequently asked questions.
 
-### `npm start`
+The main goal was to recreate the provided design while practising React component structure, state management, conditional rendering, and responsive styling.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Expand and collapse FAQ answers.
+- Keep only one FAQ answer open at a time.
+- Change between plus and minus icons based on the active question.
+- Responsive layout for desktop and mobile devices.
+- Keyboard-accessible accordion buttons.
+- Hover and focus states for interactive elements.
 
-### `npm test`
+### Screenshot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Add a screenshot of the completed project here.
 
-### `npm run build`
+### Links
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Live Site: https://sensational-cuchufli-af0f01.netlify.app/
+- GitHub Repository: https://github.com/abdulsalamopeyemi
+- Frontend Mentor Solution: https://www.frontendmentor.io/solutions/faq-accordion-react-and-scss-project-EUDWalvF0F
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- JavaScript (ES6+)
+- JSX
+- SCSS (Sass)
+- CSS Flexbox
+- CSS Grid (during initial development)
+- Create React App
+- Git and GitHub
 
-### `npm run eject`
+## What I Learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Building this project helped me improve my understanding of several React concepts.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### React State Management
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I learned how to use the `useState` Hook to manage the currently active FAQ question.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Initially, I managed state inside individual accordion items. I later learned how to lift state up to a parent component so that only one question could remain open at a time.
 
-## Learn More
+### Props and Component Communication
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I practised passing data and functions from a parent component to child components using props.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This helped me understand how child components can trigger state updates managed by their parent.
 
-### Code Splitting
+### Conditional Rendering
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I used conditional rendering to control the visibility of FAQ answers and switch between plus and minus icons.
 
-### Analyzing the Bundle Size
+### Responsive Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+I used SCSS to organize styles, create reusable variables and mixins, and adapt the layout to different screen sizes.
 
-### Making a Progressive Web App
+## Challenges I Encountered
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+One of my biggest challenges was understanding how to manage the active accordion item using a shared state variable.
 
-### Advanced Configuration
+At first, I could open an answer but struggled to close it or ensure that opening another answer closed the previous one.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+I resolved this by learning about lifting state up, passing callback functions through props, and comparing the active question ID with each item's ID.
 
-### Deployment
+I also encountered issues with referencing background images in SCSS and learned more about how assets in React's public directory are served.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Continued Development
 
-### `npm run build` fails to minify
+In future projects, I plan to improve my knowledge of:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React component architecture
+- State management and custom Hooks
+- Accessibility
+- Responsive web design
+- Writing cleaner and more maintainable code
+
+## Author
+
+- Frontend Mentor — https://www.frontendmentor.io/profile/abdulsalamopeyemi
+- GitHub — https://github.com/abdulsalamopeyemi/faq-accordion
+
+## Acknowledgments
+
+Challenge and design provided by [Frontend Mentor](https://www.frontendmentor.io/).
